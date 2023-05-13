@@ -1,0 +1,61 @@
+### Create Article
+POST localhost:8080/api/v1/article
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2ODI4Nzc5NTksImlkIjo0LCJyb2xlIjoiTU9ERVJBVE9SIiwiZXhwIjoxNjgyOTY0MzU5LCJpc3MiOiJLdW51eiB0ZXN0IHBvcnRhbGkifQ.wdgon2xzLLt418S3KyN5NRAkF_tNE4z7tp_7fYoj67OlTCgaxR-APDIlQ_FTZmDahMnqH460iO2EyG4L5bXofQ
+Content-Type:  application/json
+
+{
+  "title": "title 7 ",
+  "description": "Biggest waters in the world",
+  "content": "Vs vs Vs",
+  "regionId": 1,
+  "categoryId": 1,
+  "attachId": "82caaa61-3b21-4c8e-8005-c3e32b5f5008",
+  "articleTypeId": 2
+}
+
+### Update Article
+PUT localhost:8080/api/v1/article/update/444da53e-1808-4148-8842-25ea366f793a
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2ODI4Nzc5NTksImlkIjo0LCJyb2xlIjoiTU9ERVJBVE9SIiwiZXhwIjoxNjgyOTY0MzU5LCJpc3MiOiJLdW51eiB0ZXN0IHBvcnRhbGkifQ.wdgon2xzLLt418S3KyN5NRAkF_tNE4z7tp_7fYoj67OlTCgaxR-APDIlQ_FTZmDahMnqH460iO2EyG4L5bXofQ
+Content-Type:  application/json
+
+{
+
+  "title": "title 4 ",
+  "description": "Most opposites in the world",
+  "content": "Vs",
+  "regionId": 1,
+  "categoryId": 1,
+  "attachId": "c15ac389-8dd7-4a67-8742-9d947b4f5480",
+  "articleTypeId": 1
+}
+
+### Delete profle
+DELETE localhost:8080/api/v1/article/delete/2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2ODIzOTYxODUsImlkIjoxMCwicm9sZSI6Ik1PREVSQVRPUiIsImV4cCI6MTY4MjQ4MjU4NSwiaXNzIjoiS3VudXogdGVzdCBwb3J0YWxpIn0.vdC5XN2ih6I-lACkcL0R23fdem4sclwMEO9F9EKbw5HPbgYeI4XLv0ECnv6B02Wk4LNwDtjWcG8bVnKYWpJ_AQ
+Content-Type:  application/json
+
+### Get Top 5 article By TypeId
+GET localhost:8080/api/v1/article/type/2/five
+
+### Get Top 5 article By TypeId
+GET localhost:8080/api/v1/article/get-last8
+Content-Type: application/json
+
+{
+  "idList": ["444da53e-1808-4148-8842-25ea366f793a", "66c9ebbb-0f76-45a3-a20f-ec6223b20344", "07e78eba-f0bf-4a16-a0e7-63fdffa3659a"]
+}
+
+### Get by id and Language
+GET localhost:8080/api/v1/article/get-by-id-lang?id=2fdf43a8-858b-4547-822f-d37bdf58c01b&language=ru
+### Get by id
+GET localhost:8080/api/v1/article/2fdf43a8-858b-4547-822f-d37bdf58c01b
+Accept-Language: ru
+
+### Filter
+POST localhost:8080/api/v1/article/filter
+Content-Type: application/json
+
+{
+  "title": "BMW"
+}
+

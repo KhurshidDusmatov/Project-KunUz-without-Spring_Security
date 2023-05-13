@@ -1,0 +1,44 @@
+## Create Comment
+POST localhost:8080/api/v1/comment
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2ODMyOTAwOTksImlkIjo0LCJyb2xlIjoiTU9ERVJBVE9SIiwiZXhwIjoxNjgzMzc2NDk5LCJpc3MiOiJLdW51eiB0ZXN0IHBvcnRhbGkifQ.Em9B_1FrxNvucWImXykTQue8IryEtJEgyGiw-g37hwl34unjNj4pWmMwlykg0qCylnUsKD4Bq93H-l1I8eL9RQ
+
+{
+  "content": "hello",
+  "articleId": "d0b9d1f3-0a34-4ca3-bf12-56e98099424c"
+}
+
+### update
+PUT localhost:8080/api/v1/comment/update?id=2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2ODMyOTAwOTksImlkIjo0LCJyb2xlIjoiTU9ERVJBVE9SIiwiZXhwIjoxNjgzMzc2NDk5LCJpc3MiOiJLdW51eiB0ZXN0IHBvcnRhbGkifQ.Em9B_1FrxNvucWImXykTQue8IryEtJEgyGiw-g37hwl34unjNj4pWmMwlykg0qCylnUsKD4Bq93H-l1I8eL9RQ
+Content-Type:  application/json
+
+{
+  "content": "what's up broo",
+  "articleId": "d0b9d1f3-0a34-4ca3-bf12-56e98099424c",
+  "replyId": 1
+}
+
+
+### Delete
+DELETE localhost:8080/api/v1/comment/delete?id=2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2ODE4OTAwMTgsImlkIjoyLCJyb2xlIjoiQURNSU4iLCJleHAiOjE2ODE5NzY0MTgsImlzcyI6Ikt1bnV6IHRlc3QgcG9ydGFsaSJ9.o9vSGthi1vZwrBFfWG1a4RUWPqQbOcA0JGIaIewXg18M23XgadgOxM1L9Lw2Dd8pG2HZZNZzs7l2kdRSR8713g
+
+### Get List
+GET localhost:8080/api/v1/comment/get-all/d0b9d1f3-0a34-4ca3-bf12-56e98099424c
+
+### Get List vith pagination
+GET localhost:8080/api/v1/comment/pagination?page=1&size=8
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2ODMyOTQ4NzIsImlkIjoxMSwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjgzMzgxMjcyLCJpc3MiOiJLdW51eiB0ZXN0IHBvcnRhbGkifQ.1oC5PB9mc14kwYQbSk4dsQcvlx3gJwwSUnl_6NwmbJl2Yk3S8v4AbuMdJdGCHBMvp8b-dmalCVV0j4c053mvyA
+
+### Create filter
+POST localhost:8080/api/v1/comment/filter?page=1&size=2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2ODMyOTQ4NzIsImlkIjoxMSwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjgzMzgxMjcyLCJpc3MiOiJLdW51eiB0ZXN0IHBvcnRhbGkifQ.1oC5PB9mc14kwYQbSk4dsQcvlx3gJwwSUnl_6NwmbJl2Yk3S8v4AbuMdJdGCHBMvp8b-dmalCVV0j4c053mvyA
+Content-Type:  application/json
+
+{
+  "ownerId": 4
+}
+
+###
+GET localhost:8080/api/v1/comment/get-all-by-comment/2

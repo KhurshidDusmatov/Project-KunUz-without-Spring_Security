@@ -1,0 +1,28 @@
+### Create ArticleType
+POST localhost:8080/api/v1/article-type
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2ODE4OTAwMTgsImlkIjoyLCJyb2xlIjoiQURNSU4iLCJleHAiOjE2ODE5NzY0MTgsImlzcyI6Ikt1bnV6IHRlc3QgcG9ydGFsaSJ9.o9vSGthi1vZwrBFfWG1a4RUWPqQbOcA0JGIaIewXg18M23XgadgOxM1L9Lw2Dd8pG2HZZNZzs7l2kdRSR8713g
+Content-Type:  application/json
+
+{
+  "nameUz": "Kitob",
+  "nameRu": "книга",
+  "nameEn": "Book"
+}
+
+### update
+PUT localhost:8080/api/v1/article-type/update?id=3
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2ODE4OTAwMTgsImlkIjoyLCJyb2xlIjoiQURNSU4iLCJleHAiOjE2ODE5NzY0MTgsImlzcyI6Ikt1bnV6IHRlc3QgcG9ydGFsaSJ9.o9vSGthi1vZwrBFfWG1a4RUWPqQbOcA0JGIaIewXg18M23XgadgOxM1L9Lw2Dd8pG2HZZNZzs7l2kdRSR8713g
+Content-Type:  application/json
+
+{
+  "nameUz": "Salom",
+  "nameRu": "Привет",
+  "nameEn": "Hello"
+}
+
+### Delete
+DELETE localhost:8080/api/v1/article-type/delete?id=4
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2ODE4OTAwMTgsImlkIjoyLCJyb2xlIjoiQURNSU4iLCJleHAiOjE2ODE5NzY0MTgsImlzcyI6Ikt1bnV6IHRlc3QgcG9ydGFsaSJ9.o9vSGthi1vZwrBFfWG1a4RUWPqQbOcA0JGIaIewXg18M23XgadgOxM1L9Lw2Dd8pG2HZZNZzs7l2kdRSR8713g
+
+### Get List
+GET localhost:8080/api/v1/article-type/pagination?page=1&size=3
